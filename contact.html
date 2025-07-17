@@ -12,8 +12,8 @@
       --light: #fff;
       --gray: #f4f4f4;
       --button-bg: #ffcc00;
-      --button-text: #555;
-      --button-shadow: #d1d1d1;
+      --button-text: #000;
+      --button-shadow: rgba(0, 0, 0, 0.2);
       --button-border: #555;
     }
 
@@ -26,7 +26,7 @@
 
     html, body {
       height: 100%;
-      background: #ffffff;
+      background: var(--light);
       color: var(--dark);
     }
 
@@ -45,7 +45,7 @@
     .contact-content {
       padding: 4rem 2rem;
       text-align: center;
-      background-color: #ffffff;
+      background-color: var(--light);
     }
 
     .contact-content h2 {
@@ -59,23 +59,29 @@
       margin: 1rem 0;
     }
 
-    .back-btn {
+    .paper-button {
       display: inline-block;
       margin-top: 2rem;
       padding: 0.8rem 1.6rem;
       background: var(--button-bg);
       color: var(--button-text);
       font-weight: bold;
-      border: 2px solid var(--button-border); /* ✅ Outline color #555 */
-      border-radius: 14px;
-      box-shadow: 0 6px 0 var(--button-shadow);
+      border: 2px solid var(--button-border);
+      border-radius: 12px;
+      box-shadow: 4px 4px 0 var(--button-shadow);
       text-decoration: none;
-      transition: all 0.2s ease;
+      transform: rotate(-2deg);
+      transition: all 0.2s ease-in-out;
     }
 
-    .back-btn:active {
-      transform: translateY(4px);
-      box-shadow: 0 2px 0 var(--button-shadow);
+    .paper-button:hover {
+      transform: rotate(0deg) scale(1.03);
+      box-shadow: 2px 2px 0 var(--button-shadow);
+    }
+
+    .paper-button:active {
+      transform: translateY(2px);
+      box-shadow: 0 1px 0 var(--button-shadow);
     }
 
     footer {
@@ -99,7 +105,7 @@
     <p><strong>Phone:</strong> 9012775446</p>
     <p><strong>Email:</strong> businessamanxo@gmail.com</p>
     <p><strong>Owner:</strong> Upendra</p>
-    <a href="index.html" class="back-btn">Back to Home</a>
+    <a href="index.html" class="paper-button">Back to Home</a>
   </section>
 
   <footer>
