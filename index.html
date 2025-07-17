@@ -36,6 +36,10 @@
     header h1 {
       font-size: 1.5rem;
     }
+    nav {
+      display: flex;
+      align-items: center;
+    }
     nav a {
       margin-left: 1rem;
       text-decoration: none;
@@ -43,10 +47,30 @@
       font-weight: bold;
       outline: none;
     }
-    nav a:focus {
-      outline: none;
-      box-shadow: none;
+
+    .paper-button {
+      background: #fff;
+      color: #000;
+      font-weight: bold;
+      padding: 0.4rem 1rem;
+      border-radius: 8px;
+      box-shadow: 4px 4px 0 rgba(0,0,0,0.15);
+      transform: rotate(-1.5deg);
+      border: 1px solid #ccc;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
     }
+
+    .paper-button:hover {
+      box-shadow: 2px 2px 0 rgba(0,0,0,0.2);
+      transform: rotate(0deg) scale(1.02);
+    }
+
+    .paper-button:focus {
+      outline: none;
+      box-shadow: 4px 4px 0 rgba(0,0,0,0.15); /* Retain shadow on click */
+    }
+
     .banner {
       text-align: center;
       padding: 2rem;
@@ -154,7 +178,8 @@
   <header>
     <h1>Toysss</h1>
     <nav>
-      <a href="contact.html">Contact</a>
+      <a href="#" class="paper-button">Toysss</a>
+      <a href="contact.html" class="paper-button">Contact</a>
     </nav>
   </header>
 
