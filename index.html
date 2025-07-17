@@ -45,6 +45,7 @@
     nav {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
     }
 
     nav a {
@@ -52,7 +53,6 @@
       text-decoration: none;
       color: var(--text);
       font-weight: bold;
-      outline: none;
     }
 
     .paper-button {
@@ -174,7 +174,6 @@
       text-align: left;
     }
 
-    /* WhatsApp Chat Flat Paper Button */
     .whatsapp {
       position: fixed;
       bottom: 20px;
@@ -187,7 +186,7 @@
       box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.15);
       border: 1px solid #1da851;
       text-decoration: none;
-      transform: none; /* flat, no tilt */
+      transform: none;
       transition: all 0.2s ease-in-out;
       z-index: 1000;
     }
@@ -196,11 +195,29 @@
       box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
       transform: scale(1.02);
     }
+
+    @media (max-width: 600px) {
+      .paper-button {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+        box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+      }
+
+      .whatsapp {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+        box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+      }
+
+      header h1 {
+        font-size: 1.2rem;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <!-- WhatsApp Chat Button (Flat) -->
+  <!-- WhatsApp Chat Button -->
   <a class="whatsapp" href="https://wa.me/919012775446" target="_blank">💬 Chat</a>
 
   <header>
@@ -208,6 +225,7 @@
     <nav>
       <a href="#" class="paper-button">Toysss</a>
       <a href="contact.html" class="paper-button">Contact</a>
+      <a href="profile.html" class="paper-button">Create Profile</a>
     </nav>
   </header>
 
@@ -237,7 +255,7 @@
       <a href="product.html">View Details</a>
     </div>
 
-    <!-- 7 Coming Soon Boxes -->
+    <!-- Coming Soon Boxes -->
     <div class="product"><img src="https://via.placeholder.com/150?text=Coming+Soon"><h4>Coming Soon</h4></div>
     <div class="product"><img src="https://via.placeholder.com/150?text=Coming+Soon"><h4>Coming Soon</h4></div>
     <div class="product"><img src="https://via.placeholder.com/150?text=Coming+Soon"><h4>Coming Soon</h4></div>
