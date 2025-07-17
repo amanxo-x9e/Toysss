@@ -45,15 +45,14 @@
     nav {
       display: flex;
       align-items: center;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      gap: 0.5rem;
     }
 
     nav a {
+      margin-left: 1rem;
       text-decoration: none;
       color: var(--text);
       font-weight: bold;
+      outline: none;
     }
 
     .paper-button {
@@ -196,36 +195,18 @@
       box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
       transform: scale(1.02);
     }
-
-    @media (max-width: 600px) {
-      .paper-button {
-        padding: 0.3rem 0.6rem;
-        font-size: 0.8rem;
-        box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
-      }
-
-      .whatsapp {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.8rem;
-        box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
-      }
-
-      header h1 {
-        font-size: 1.2rem;
-      }
-    }
   </style>
 </head>
 <body>
 
-  <!-- WhatsApp Chat Button -->
+  <!-- WhatsApp Chat Button (Flat) -->
   <a class="whatsapp" href="https://wa.me/919012775446" target="_blank">💬 Chat</a>
 
   <header>
     <h1>Toysss</h1>
     <nav>
-      <a href="contact.html" class="paper-button">Contact</a>
       <a href="profile.html" class="paper-button">Create Profile</a>
+      <a href="contact.html" class="paper-button">Contact</a>
     </nav>
   </header>
 
@@ -255,7 +236,7 @@
       <a href="product.html">View Details</a>
     </div>
 
-    <!-- Coming Soon Boxes -->
+    <!-- 7 Coming Soon Boxes -->
     <div class="product"><img src="https://via.placeholder.com/150?text=Coming+Soon"><h4>Coming Soon</h4></div>
     <div class="product"><img src="https://via.placeholder.com/150?text=Coming+Soon"><h4>Coming Soon</h4></div>
     <div class="product"><img src="https://via.placeholder.com/150?text=Coming+Soon"><h4>Coming Soon</h4></div>
