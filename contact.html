@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact – Toysss</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #ffcc00;
+      --dark: #222;
+      --light: #fff;
+      --gray: #f4f4f4;
+      --button-bg: #ffcc00;
+      --button-text: #555;
+      --button-shadow: #d1d1d1;
+      --button-border: #555;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+      background: #ffffff;
+      color: var(--dark);
+    }
+
+    header {
+      background: var(--primary);
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--dark);
+    }
+
+    .contact-content {
+      padding: 4rem 2rem;
+      text-align: center;
+      background-color: #ffffff;
+    }
+
+    .contact-content h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: var(--dark);
+    }
+
+    .contact-content p {
+      font-size: 1.3rem;
+      margin: 1rem 0;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.8rem 1.6rem;
+      background: var(--button-bg);
+      color: var(--button-text);
+      font-weight: bold;
+      border: 2px solid var(--button-border); /* ✅ Outline color #555 */
+      border-radius: 14px;
+      box-shadow: 0 6px 0 var(--button-shadow);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .back-btn:active {
+      transform: translateY(4px);
+      box-shadow: 0 2px 0 var(--button-shadow);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: var(--gray);
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Contact Toysss</h1>
+  </header>
+
+  <section class="contact-content">
+    <h2>Get in Touch with Toysss</h2>
+    <p><strong>Phone:</strong> 9012775446</p>
+    <p><strong>Email:</strong> businessamanxo@gmail.com</p>
+    <p><strong>Owner:</strong> Upendra</p>
+    <a href="index.html" class="back-btn">Back to Home</a>
+  </section>
+
+  <footer>
+    &copy; 2025 Toysss by Upendra
+  </footer>
+
+</body>
+</html>
