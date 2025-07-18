@@ -78,6 +78,25 @@
       box-shadow: 4px 4px 0 rgba(0,0,0,0.15);
     }
 
+    .add-to-cart-button {
+      background: #ffffff;
+      color: #000;
+      font-weight: bold;
+      padding: 0.4rem 1rem;
+      border-radius: 8px;
+      box-shadow: 4px 4px 0 rgba(0,0,0,0.15);
+      border: 1px solid #ccc;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .add-to-cart-button:hover {
+      box-shadow: 2px 2px 0 rgba(0,0,0,0.2);
+      transform: scale(1.02);
+    }
+
     .banner {
       text-align: center;
       padding: 2rem;
@@ -157,17 +176,6 @@
       font-size: 0.9rem;
     }
 
-    .product a {
-      display: inline-block;
-      margin-top: 0.5rem;
-      background: var(--primary);
-      padding: 0.4rem 1rem;
-      border-radius: 0.5rem;
-      text-decoration: none;
-      color: #000;
-      font-weight: bold;
-    }
-
     footer {
       background: var(--gray);
       padding: 2rem;
@@ -233,12 +241,8 @@
       <img src="https://via.placeholder.com/150" alt="Soft Toy">
       <h4>My First Soft Toy</h4>
       <p>₹399</p>
-      <a href="product.html">View Details</a>
+      <button class="add-to-cart-button" onclick="addToCart()">Add to Cart</button>
     </div>
-    <div class="product"><img src="https://via.placeholder.com/150?text=Coming+Soon"><h4>Coming Soon</h4></div>
-    <div class="product"><img src="https://via.placeholder.com/150?text=Coming+Soon"><h4>Coming Soon</h4></div>
-    <div class="product"><img src="https://via.placeholder.com/150?text=Coming+Soon"><h4>Coming Soon</h4></div>
-    <div class="product"><img src="https://via.placeholder.com/150?text=Coming+Soon"><h4>Coming Soon</h4></div>
     <div class="product"><img src="https://via.placeholder.com/150?text=Coming+Soon"><h4>Coming Soon</h4></div>
     <div class="product"><img src="https://via.placeholder.com/150?text=Coming+Soon"><h4>Coming Soon</h4></div>
     <div class="product"><img src="https://via.placeholder.com/150?text=Coming+Soon"><h4>Coming Soon</h4></div>
@@ -250,6 +254,30 @@
     <p>Email: businessamanxo@gmail.com</p>
     <p>&copy; 2025 Toysss by Upendra</p>
   </footer>
+
+  <script>
+    function addToCart() {
+      const product = {
+        id: 1,
+        name: "My First Soft Toy",
+        price: 399,
+        image: "https://via.placeholder.com/150",
+        quantity: 1
+      };
+
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      const index = cart.findIndex(item => item.id === product.id);
+
+      if (index !== -1) {
+        cart[index].quantity += 1;
+      } else {
+        cart.push(product);
+      }
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }
+  </script>
 
 </body>
 </html>
