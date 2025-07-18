@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Cart – Toysss</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #ffcc00;
+      --light-bg: #ffffff;
+      --text: #222;
+      --gray: #f4f4f4;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: var(--light-bg);
+      color: var(--text);
+      padding: 2rem;
+    }
+
+    header {
+      background: var(--primary);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    .paper-button {
+      background: #ffffff;
+      color: #000;
+      font-weight: bold;
+      padding: 0.4rem 1rem;
+      border-radius: 8px;
+      box-shadow: 4px 4px 0 rgba(0,0,0,0.15);
+      transform: rotate(-1.5deg);
+      border: 1px solid #ccc;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .paper-button:hover {
+      box-shadow: 2px 2px 0 rgba(0,0,0,0.2);
+      transform: rotate(0deg) scale(1.02);
+    }
+
+    .cart {
+      max-width: 1000px;
+      margin: auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .cart-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #eee;
+      padding: 1rem 0;
+    }
+
+    .cart-item img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      border-radius: 10px;
+      margin-right: 1rem;
+    }
+
+    .item-info {
+      flex: 2;
+      display: flex;
+      align-items: center;
+    }
+
+    .item-info h3 {
+      font-size: 1.1rem;
+    }
+
+    .item-price {
+      font-weight: bold;
+      flex: 1;
+      text-align: right;
+    }
+
+    .item-controls {
+      flex: 1;
+      display: flex;
+      justify-content: end;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .item-controls input {
+      width: 50px;
+      padding: 0.4rem;
+      text-align: center;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .item-controls button {
+      background: red;
+      color: white;
+      border: none;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .total {
+      margin-top: 2rem;
+      text-align: right;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: end;
+      margin-top: 1.5rem;
+    }
+
+    @media (max-width: 600px) {
+      .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .item-price, .item-controls {
+        text-align: left;
+        width: 100%;
+        margin-top: 0.5rem;
+      }
+      .actions {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Your Cart</h1>
+    <a href="index.html" class="paper-button">Back to Shop</a>
+  </header>
+
+  <section class="cart">
+
+    <!-- Sample Cart Item -->
+    <div class="cart-item">
+      <div class="item-info">
+        <img src="https://via.placeholder.com/80" alt="Soft Toy" />
+        <div>
+          <h3>My First Soft Toy</h3>
+          <small>₹399 each</small>
+        </div>
+      </div>
+
+      <div class="item-controls">
+        <input type="number" value="1" min="1" />
+        <button>Remove</button>
+      </div>
+
+      <div class="item-price">₹399</div>
+    </div>
+
+    <!-- Total Price -->
+    <div class="total">Total: ₹399</div>
+
+    <!-- Proceed to Checkout Button -->
+    <div class="actions">
+      <a href="checkout.html" class="paper-button">Proceed to Checkout</a>
+    </div>
+
+  </section>
+
+</body>
+</html>
